@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sns.MainActivity">
+    tools:context="com.example.sns_super_android.sns.MainActivity">
 
     <FrameLayout
         android:id="@+id/framelayout"
@@ -29,8 +29,8 @@
         android:includeFontPadding="false"
         android:fontFamily="@font/noto_sans_regular"
         android:background="@drawable/navigation_background"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        app:itemTextColor="@drawable/bottom_icon_color"
+        app:itemIconTint="@drawable/bottom_icon_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/bottomNavigation_line"
         app:menu="@menu/menu" />

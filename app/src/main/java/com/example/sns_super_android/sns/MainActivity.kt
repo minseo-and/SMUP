@@ -1,4 +1,4 @@
-package com.example.sns
+package com.example.sns_super_android.sns
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -27,28 +27,6 @@ class MainActivity : AppCompatActivity() {
         fragment_main = MainPageFragment()
         transaction = fragmentManager!!.beginTransaction()
         transaction!!.replace(R.id.framelayout, fragment_main!!).commitAllowingStateLoss()
-        bottomNavigationView!!.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> {
-                    Log.i(ContentValues.TAG, "home")
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.framelayout,
-                        fragment_main!!
-                    )
-                        .commitAllowingStateLoss()
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.chat -> {
-                    Log.i(ContentValues.TAG, "chat")
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.framelayout,
-                        chattingPageFragment!!
-                    )
-                        .commitAllowingStateLoss()
-                    return@OnNavigationItemSelectedListener true
-                }
-            }
-            true
-        })
+
     }
 }
