@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.sns.fragment.mainpage.MainPageFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/bottomNavigation_line"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:orientation="horizontal"
+           app:layout_constraintGuide_percent="0.93" />
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/scheduler_left_line"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:orientation="vertical"
+           app:layout_constraintGuide_percent="0.05" />
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/scheduler_right_line"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:orientation="vertical"
+           app:layout_constraintGuide_percent="0.95" />
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/scheduler_top_line"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:orientation="horizontal"
+           app:layout_constraintGuide_percent="0.1" />
+
+       <androidx.constraintlayout.widget.Guideline
+           android:id="@+id/scheduler_bottom_line"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:orientation="horizontal"
+           app:layout_constraintGuide_percent="0.7" />
+
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:src="@drawable/background_circle_1"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/toolbar_main_page"
+           android:layout_marginTop="-7dp"
+           android:layout_marginRight="40dp"/>
+
+       <ImageView
+           android:layout_width="94dp"
+           android:layout_height="100dp"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toTopOf="@id/scheduler"
+           android:src="@drawable/rectangle"
+           android:layout_marginTop="100dp"
+           android:layout_marginLeft="-30dp"/>
+
+       <ImageView
+           android:layout_width="77dp"
+           android:layout_height="81dp"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintBottom_toBottomOf="@id/scheduler"
+           android:src="@drawable/rectangle2"
+           android:layout_marginTop="100dp"
+           android:layout_marginLeft="-40dp"/>
+
+       <ImageView
+           android:layout_width="120dp"
+           android:layout_height="123dp"
+           app:layout_constraintTop_toTopOf="@id/scheduler"
+           app:layout_constraintBottom_toBottomOf="@id/scheduler"
+           app:layout_constraintRight_toRightOf="parent"
+           android:layout_marginRight="-50dp"
+           android:src="@drawable/mideum_circle"/>
+
+       <ImageView
+           android:layout_width="171dp"
+           android:layout_height="159dp"
+           app:layout_constraintBottom_toBottomOf="@id/main_template"
+           app:layout_constraintLeft_toRightOf="@id/main_template"
+           android:layout_marginLeft="-50dp"
+           android:src="@drawable/big_circle"/>
+
+       <Toolbar
+           android:id="@+id/toolbar_main_page"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:background="@drawable/toolbar_background"
+           android:elevation="10dp"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:id="@+id/tv_school_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/gothic"
+                   android:text="대덕소프트웨어마이스터고등학교"
+                   android:textColor="@color/black"
+                   android:textSize="12dp"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toTopOf="@id/tv_student_name"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/tv_student_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/gothic"
+                   android:text="1학년 3반 장석연"
+                   android:textColor="#545454"
+                   android:textSize="10dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/tv_school_name" />
+
+               <ImageView
+                   android:layout_width="15dp"
+                   android:layout_height="15dp"
+                   android:layout_marginLeft="5dp"
+                   android:src="@drawable/refresh"
+                   app:layout_constraintBottom_toTopOf="@id/tv_student_name"
+                   app:layout_constraintLeft_toRightOf="@id/tv_school_name"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="18dp"
+                   android:layout_marginLeft="5dp"
+                   android:src="@drawable/bell"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </Toolbar>
+
+       <ScrollView
+           android:id="@+id/scheduler"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:background="@drawable/scheduler_background"
+           android:elevation="10dp"
+           app:layout_constraintBottom_toBottomOf="@id/scheduler_bottom_line"
+           app:layout_constraintLeft_toLeftOf="@id/scheduler_left_line"
+           app:layout_constraintRight_toRightOf="@id/scheduler_right_line"
+           app:layout_constraintTop_toTopOf="@id/scheduler_top_line">
+
+           <TableLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TableRow
+                   android:id="@+id/week"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:gravity="center"
+                       android:text=" " />
+
+                   <TextView
+                       android:id="@+id/monday"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="월"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="화"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="수"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="목"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="금"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/first_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="1"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_first_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_first_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_first_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_first_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_first_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/second_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="2"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_second_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_second_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_second_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_second_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_second_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/third_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="3"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_third_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_third_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_third_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_third_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_third_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/fourth_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="4"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_fourth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_fourth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_fourth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_fourth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_fourth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/lunch"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:fontFamily="@font/gothic"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_span="5"
+                       android:background="@drawable/scheduler_table_background"
+                       android:backgroundTint="#9DC6FF"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="즐거운 점심시간"
+                       android:textColor="@color/white"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/fifth_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="5"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_fifth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_fifth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_fifth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_fifth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_fifth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/sixth_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="6"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_sixth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_sixth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_sixth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_sixth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_sixth_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+               <TableRow
+                   android:id="@+id/seventh_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginTop="10dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text="7"
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/monday_seventh_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/tuesday_seventh_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/wednesday_seventh_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/thrusday_seventh_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+                   <TextView
+                       android:id="@+id/friday_seventh_class"
+                       android:layout_width="50dp"
+                       android:layout_height="41dp"
+                       android:layout_marginTop="10dp"
+                       android:background="@drawable/scheduler_table_background"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:gravity="center"
+                       android:text=""
+                       android:textColor="#787878"
+                       android:textSize="17dp" />
+
+               </TableRow>
+
+           </TableLayout>
+
+
+       </ScrollView>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/main_list"
+           android:layout_width="140dp"
+           android:layout_height="118dp"
+           android:background="@drawable/main_list_background"
+           android:elevation="10dp"
+           app:layout_constraintBottom_toTopOf="@id/bottomNavigation_line"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@id/main_template"
+           app:layout_constraintTop_toBottomOf="@id/scheduler">
+
+
+           <TextView
+               android:id="@+id/main_list_today"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="5dp"
+               android:includeFontPadding="false"
+               android:fontFamily="@font/noto_sans_regular"
+               android:text="오늘의 일정"
+               android:textColor="@color/black"
+               android:textSize="10dp"
+               android:textStyle="bold"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <HorizontalScrollView
+               android:layout_width="133dp"
+               android:layout_height="80dp"
+               android:orientation="vertical"
+               android:layout_marginTop="10dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:text="수학 점프 5번 풀기"
+                       android:textColor="@color/black"
+                       android:textSize="10dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:text="과학 수행평가"
+                       android:textColor="@color/black"
+                       android:textSize="10dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:text="체육 축구 경기 (제 3경기)"
+                       android:textColor="@color/black"
+                       android:textSize="10dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:text="정보처리기능사 필기 접수"
+                       android:textColor="@color/black"
+                       android:textSize="10dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:includeFontPadding="false"
+                       android:fontFamily="@font/noto_sans_regular"
+                       android:text="정보처리기능사 실기 시험"
+                       android:textColor="@color/black"
+                       android:textSize="10dp" />
+
+               </LinearLayout>
+
+           </HorizontalScrollView>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/main_template"
+           android:layout_width="140dp"
+           android:layout_height="118dp"
+           android:background="@drawable/main_list_background"
+           android:elevation="10dp"
+           app:layout_constraintBottom_toTopOf="@id/bottomNavigation_line"
+           app:layout_constraintLeft_toRightOf="@id/main_list"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/scheduler">
+
+           <TextView
+               android:id="@+id/tv_template"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:includeFontPadding="false"
+               android:fontFamily="@font/noto_sans_regular"
+               android:text="템플릿"
+               android:textColor="@color/black"
+               android:textSize="12dp"
+               android:textStyle="bold"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="20dp"
+               android:includeFontPadding="false"
+               android:fontFamily="@font/noto_sans_regular"
+               android:text="공부한 것들을 기록\n해보세요"
+               android:textColor="@color/black"
+               android:textSize="8dp"
+               app:layout_constraintBottom_toTopOf="@id/main_template_chat"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/tv_template" />
+
+           <ImageView
+               android:id="@+id/main_template_chat"
+               android:layout_width="55dp"
+               android:layout_height="55dp"
+               android:layout_margin="10dp"
+               android:src="@drawable/chat_logo"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintRight_toRightOf="parent" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

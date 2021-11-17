@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.sns.login.ui.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_top_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_bottom_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/id_top_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_left_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_right_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_left_to_parent_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_right_to_parent_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_regular"
+        android:text="Login"
+        android:textColor="@color/main"
+        android:textSize="60dp"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="@id/login_bottom_line"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_line"
+        app:layout_constraintTop_toTopOf="@id/login_top_line" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/id_top_line"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        android:text="아이디"
+        android:textSize="17dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"/>
+
+    <EditText
+        android:id="@+id/et_write_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:inputType="text"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_id"/>
+
+    <TextView
+        android:id="@+id/tv_forget_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/et_write_id"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/main"
+        android:text="아이디를 잊으셨나요?"/>
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_forget_id"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        android:layout_marginTop="30dp"
+        android:text="비밀번호"
+        android:textSize="17dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"/>
+
+    <EditText
+        android:id="@+id/et_write_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:inputType="text"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_password"/>
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/et_write_password"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/main"
+        android:text="비밀번호를 잊으셨나요?"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/login_btn_style"
+        android:text="Login"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        app:layout_constraintLeft_toLeftOf="@id/login_left_to_parent_line"
+        app:layout_constraintRight_toRightOf="@id/login_right_to_parent_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_forget_password"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/tv_none_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/btn_login"
+        app:layout_constraintRight_toLeftOf="@id/tv_go_register"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        android:text="계정이 없으신가요?"
+        android:textSize="13dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="#777777"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_go_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_none_info"
+        app:layout_constraintRight_toRightOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        android:text="회원가입 하러가기"
+        android:textSize="13dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/noto_sans_regular"
+        android:textColor="@color/main"
+        android:layout_marginTop="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
