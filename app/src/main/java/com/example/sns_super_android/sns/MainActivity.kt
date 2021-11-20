@@ -1,19 +1,15 @@
 package com.example.sns_super_android.sns
 
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.sns.fragment.chatting.ChattingPageFragment
 import com.example.sns.fragment.mainpage.MainPageFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.fragment.mypage.MypageFragment
-import com.example.sns_super_android.sns.login.ui.SignUpFragment
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var bottomNavigationView: BottomNavigationView? = null

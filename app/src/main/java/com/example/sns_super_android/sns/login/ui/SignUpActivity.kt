@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sns_super_android.R
-import com.example.sns_super_android.sns.login.ui.SignUpFragment
+import com.example.sns_super_android.sns.fragment.signup.SignUpFragment
 
 class SignUpActivity : AppCompatActivity() {
     private var btn_skip : Button? = null

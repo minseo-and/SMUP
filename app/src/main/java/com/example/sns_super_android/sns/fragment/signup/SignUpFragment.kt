@@ -1,4 +1,4 @@
-package com.example.sns_super_android.sns.login.ui
+package com.example.sns_super_android.sns.fragment.signup
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
