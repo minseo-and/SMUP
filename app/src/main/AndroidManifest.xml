@@ -10,20 +10,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SNS_Super_Android">
         <activity
-            android:name=".sns.Mypage.SettingActivity"
+            android:name=".sns.notice.NoticeActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".sns.Mypage.PasswordPopupWindowActivity"
             android:exported="true" />
+        <activity
+            android:name=".sns.Mypage.SettingPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.Mypage.SettingActivity"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name="com.example.sns.service.chatting.ChatActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".sns.splash.IntroActivity"
-            android:exported="true"></activity>
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name="com.example.sns.login.ui.SignUpActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name="com.example.sns.login.ui.LoginActivity"
-            android:exported="true" />
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".sns.MainActivity"
             android:exported="true">

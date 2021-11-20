@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timer_array">
+        <item>5분</item>
+        <item>10분</item>
+        <item>30분</item>
+        <item>1시간</item>
+        <item>6시간</item>
+        <item>12시간</item>
+        <item>24시간</item>
+        <item>다시 켤 때까지</item>
+    </string-array>
+</resources>

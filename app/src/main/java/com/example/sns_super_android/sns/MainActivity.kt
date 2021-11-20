@@ -3,6 +3,7 @@ package com.example.sns_super_android.sns
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
@@ -11,22 +12,40 @@ import com.example.sns.fragment.chatting.ChattingPageFragment
 import com.example.sns.fragment.mainpage.MainPageFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.sns_super_android.R
+import com.example.sns_super_android.sns.fragment.mypage.MypageFragment
+import com.example.sns_super_android.sns.login.ui.SignUpFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var bottomNavigationView: BottomNavigationView? = null
     private var fragmentManager: FragmentManager? = null
     private var fragment_main: MainPageFragment? = null
     private val chattingPageFragment: ChattingPageFragment? = null
-    private var transaction: FragmentTransaction? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        bottomNavigationView =
-            findViewById<View>(R.id.main_bottom_navigation) as BottomNavigationView
-        fragmentManager = supportFragmentManager
-        fragment_main = MainPageFragment()
-        transaction = fragmentManager!!.beginTransaction()
-        transaction!!.replace(R.id.framelayout, fragment_main!!).commitAllowingStateLoss()
+        bottomNavigationView = findViewById<View> (R.id.main_bottom_navigation) as BottomNavigationView
+        bottomNavigationView!!.setOnNavigationItemSelectedListener(this)
+        bottomNavigationView!!.selectedItemId = R.id.menu_home
 
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.menu_home ->{
+                val mainPageFragment = MainPageFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.framelayout, mainPageFragment)
+                    .commit()
+                return true
+            }
+            R.id.menu_mypage ->{
+                val mypageFragment = MypageFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.framelayout, mypageFragment)
+                    .commit()
+                return true
+            }
+        }
+        return false
     }
 }
