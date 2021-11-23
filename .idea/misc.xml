@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1983695652173913" />
+        <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1983695652173913" />
         <entry key="app/src/main/res/drawable/bottom_icon_color.xml" value="0.21076923076923076" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.20462962962962963" />
         <entry key="app/src/main/res/drawable/email_add_btn.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/main_list_background.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/mainpage_button_background.xml" value="0.20833333333333334" />
@@ -26,6 +29,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17426545086119555" />
         <entry key="app/src/main/res/layout/activity_notice.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_password_popup_window.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/layout/activity_ring_tone_notice.xml" value="0.1983695652173913" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.2487560603392094" />
         <entry key="app/src/main/res/layout/activity_setting_password.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />

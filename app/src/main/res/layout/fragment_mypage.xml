@@ -145,6 +145,68 @@
             android:gravity="left|center"
             android:paddingLeft="10dp"/>
 
+        <Button
+            android:id="@+id/btn_setting_school"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_Left_line"
+            app:layout_constraintRight_toRightOf="@id/mypage_right_line"
+            app:layout_constraintTop_toBottomOf="@id/btn_setting_account"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mypage_button_background"
+            android:elevation="10dp"
+            android:text="학교 설정"
+            android:textSize="12dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btn_setting_notice"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_Left_line"
+            app:layout_constraintRight_toRightOf="@id/mypage_right_line"
+            app:layout_constraintTop_toBottomOf="@id/btn_setting_school"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mypage_button_background"
+            android:elevation="10dp"
+            android:text="알림 설정"
+            android:textSize="12dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"/>
+
+        <View
+            android:id="@+id/button_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/btn_setting_notice"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_Left_line"
+            app:layout_constraintRight_toRightOf="@id/mypage_right_line"
+            app:layout_constraintTop_toBottomOf="@id/button_line"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mypage_button_background"
+            android:elevation="10dp"
+            android:text="로그아웃"
+            android:textSize="12dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textColor="@color/red"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

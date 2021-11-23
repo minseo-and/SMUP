@@ -15,7 +15,7 @@ class NoticeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notice)
         spinner_timer = findViewById<View>(R.id.timer_set_spinner) as Spinner
-        spinner_timer!!.adapter = ArrayAdapter.createFromResource(this, R.array.timer_array, android.R.layout.simple_spinner_item)
+        spinner_timer!!.adapter = ArrayAdapter.createFromResource(this, R.array.timer_array, android.R.layout.simple_spinner_dropdown_item)
         spinner_timer!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 

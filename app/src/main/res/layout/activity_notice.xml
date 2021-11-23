@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".sns.notice.NoticeActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -94,6 +95,7 @@
         android:layout_width="141dp"
         android:layout_height="25dp"
         android:background="@drawable/password_setting_button_background"
+        android:spinnerMode="dropdown"
         app:layout_constraintTop_toTopOf="@id/tv_notice_timer"
         app:layout_constraintBottom_toBottomOf="@id/tv_notice_timer"
         app:layout_constraintRight_toRightOf="parent"
@@ -229,7 +231,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/noto_sans_regular"
         android:includeFontPadding="false"
-        android:text="SOOM 알림"
+        android:text="Chat 알림"
         android:textColor="@color/black"
         android:textSize="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -243,7 +245,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/noto_sans_regular"
         android:includeFontPadding="false"
-        android:text="새 글 알림"
+        android:text="전체 채팅 알림"
         android:textColor="@color/black"
         android:textSize="12dp"
         app:layout_constraintLeft_toLeftOf="parent"
