@@ -3,6 +3,7 @@
     package="com.example.sns_super_android">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,11 +13,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SNS_Super_Android">
         <activity
-            android:name=".sns.RingTone.RingToneNoticeActivity"
+            android:name="com.example.sns.login.ui.TeacherLoginActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.notice.NoticeActivity"
-            android:exported="true"></activity>
+            android:name=".sns.login.ui.StartSelectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.splash.SignUpDoneActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.notice.ui.NoticeViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.schedule.Todays_scheduleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.RingTone.ui.RingToneNoticeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sns.notice.ui.NoticeActivity"
+            android:exported="true" />
         <activity
             android:name=".sns.Mypage.PasswordPopupWindowActivity"
             android:exported="true" />
@@ -25,7 +41,7 @@
             android:exported="true" />
         <activity
             android:name=".sns.Mypage.SettingActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="com.example.sns.service.chatting.ChatActivity"
             android:exported="true" />
@@ -40,14 +56,14 @@
         </activity>
         <activity
             android:name="com.example.sns.login.ui.SignUpActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="com.example.sns.login.ui.LoginActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".sns.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

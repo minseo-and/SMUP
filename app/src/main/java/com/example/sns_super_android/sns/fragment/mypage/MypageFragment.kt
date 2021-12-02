@@ -7,13 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.core.app.ActivityCompat
-import androidx.core.app.ActivityCompat.finishAffinity
 import com.example.sns.login.ui.LoginActivity
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.Mypage.SettingActivity
-import com.example.sns_super_android.sns.Mypage.SettingPasswordActivity
-import com.example.sns_super_android.sns.notice.NoticeActivity
+import com.example.sns_super_android.sns.notice.ui.NoticeActivity
 
 class MypageFragment : Fragment() {
     private var btn_setting_account : Button?=null
@@ -49,7 +46,7 @@ class MypageFragment : Fragment() {
             activity.let {
                 val intent = Intent(context, LoginActivity::class.java)
                 startActivity(intent)
-
+                activity?.finish()
             }
         }
     }

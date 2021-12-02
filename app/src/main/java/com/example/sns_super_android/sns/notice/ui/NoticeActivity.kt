@@ -1,4 +1,4 @@
-package com.example.sns_super_android.sns.notice
+package com.example.sns_super_android.sns.notice.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,12 +21,7 @@ class NoticeActivity : AppCompatActivity() {
 
             }
 
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 when(position) {
                     0   ->  {
 

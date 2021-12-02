@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sns_super_android.R
 import com.example.sns.login.ui.LoginActivity
+import com.example.sns_super_android.sns.login.ui.StartSelectActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class IntroActivity : AppCompatActivity() {
@@ -29,7 +30,7 @@ class IntroActivity : AppCompatActivity() {
         bigStick!!.startAnimation(anim01)
         val handler = Handler()
         handler.postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, StartSelectActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

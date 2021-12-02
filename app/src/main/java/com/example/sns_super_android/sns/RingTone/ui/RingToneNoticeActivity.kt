@@ -1,4 +1,4 @@
-package com.example.sns_super_android.sns.RingTone
+package com.example.sns_super_android.sns.RingTone.ui
 
 import android.media.Ringtone
 import android.media.RingtoneManager

@@ -5,14 +5,19 @@
       <map>
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1983695652173913" />
         <entry key="../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1983695652173913" />
+        <entry key="app/src/main/res/drawable/avd_done.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/drawable/bottom_icon_color.xml" value="0.21076923076923076" />
         <entry key="app/src/main/res/drawable/button_shape.xml" value="0.20462962962962963" />
+        <entry key="app/src/main/res/drawable/check_box_background.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/drawable/email_add_btn.xml" value="0.21203703703703702" />
+        <entry key="app/src/main/res/drawable/et_login_background.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/login_btn_style.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/drawable/main_list_background.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/mainpage_button_background.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/drawable/number_check_button_background.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/password_et_background.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/password_setting_button_background.xml" value="0.21203703703703702" />
+        <entry key="app/src/main/res/drawable/select_date.xml" value="0.2" />
         <entry key="app/src/main/res/drawable/send_btn_style.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/drawable/send_text_style.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/drawable/signup_background.xml" value="0.20833333333333334" />
@@ -23,21 +28,32 @@
         <entry key="app/src/main/res/drawable/switch_track_off.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/switch_track_on.xml" value="0.21203703703703702" />
         <entry key="app/src/main/res/drawable/switch_track_selector.xml" value="0.21203703703703702" />
+        <entry key="app/src/main/res/drawable/zender_btn_background.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/zender_btn_background_false.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/zender_btn_background_true.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/zender_text_background.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/zender_text_background_true.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.21739130434782608" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.21739130434782608" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17426545086119555" />
         <entry key="app/src/main/res/layout/activity_notice.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_notice_view.xml" value="0.17426545086119555" />
         <entry key="app/src/main/res/layout/activity_password_popup_window.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/layout/activity_ring_tone_notice.xml" value="0.1983695652173913" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.2487560603392094" />
         <entry key="app/src/main/res/layout/activity_setting_password.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sign_up_done.xml" value="0.17426545086119555" />
+        <entry key="app/src/main/res/layout/activity_start_select.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_teacher_login.xml" value="0.16742654508611957" />
+        <entry key="app/src/main/res/layout/activity_todays_schedule.xml" value="0.19157608695652173" />
         <entry key="app/src/main/res/layout/chat_send_item.xml" value="0.21739130434782608" />
         <entry key="app/src/main/res/layout/fragment_chatting_page.xml" value="0.21739130434782608" />
-        <entry key="app/src/main/res/layout/fragment_main_page.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_main_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.20471014492753623" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_done.xml" value="0.17426545086119555" />
         <entry key="app/src/main/res/layout/fragment_sign_up_second.xml" value="0.20471014492753623" />
         <entry key="app/src/main/res/layout/password_popup_window.xml" value="0.30148391472660896" />
         <entry key="app/src/main/res/layout/signupbackground.xml" value="0.20471014492753623" />
