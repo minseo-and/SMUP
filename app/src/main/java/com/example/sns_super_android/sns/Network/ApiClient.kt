@@ -1,30 +1,37 @@
 package com.example.sns_super_android.sns.Network
 
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
+import com.example.sns_super_android.sns.Network.Response.TokenResponse
+import com.example.sns_super_android.sns.Network.listner.TokenListener
+import com.saehyun.trigris_android.data.login.LoginApi
+import com.saehyun.trigris_android.feature.login.model.LoginRequest
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+private val retrofit: Retrofit = Retrofit.Builder().apply {
+    baseUrl("http://3.36.108.34:8080")
+    addConverterFactory(GsonConverterFactory.create())
+}.build()
 
-object ApiClient{
+val LOGIN_API : LoginApi by lazy {
+    retrofit.create(LoginApi::class.java)
+}
+class ApiClient {
 
-    lateinit var retrofitService: UserService
-        init {
-            val httpLoggingInterceptor = HttpLoggingInterceptor()
-            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+    private val userService: UserService
 
-            val okHttpClient =
-                OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
+    init {
+        val retrofit = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("http://3.36.108.34:8080")
+            .build()
 
-            val retrofit = Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://3.36.108.34:8080")
-                .build()
-
-            var server = retrofit.create(UserService::class.java)
-        }
-
-
+        userService = retrofit.create(UserService::class.java)
     }
+
+
+}
 
 

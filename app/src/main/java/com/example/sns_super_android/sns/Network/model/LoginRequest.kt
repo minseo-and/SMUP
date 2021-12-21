@@ -1,5 +1,4 @@
-package com.example.sns_super_android.sns.Network.Request
-
+package com.saehyun.trigris_android.feature.login.model
 data class LoginRequest(
     var deviceToken: String,
     var id: String,

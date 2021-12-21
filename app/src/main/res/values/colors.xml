@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#777777</color>
     <color name="et_gray">#BABABA</color>
+    <color name="tv_purple">#CF9BF8</color>
     <color name="main">#4993FA</color>
     <color name="red">#FF6868</color>
 </resources>

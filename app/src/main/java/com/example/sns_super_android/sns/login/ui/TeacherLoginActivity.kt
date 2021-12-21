@@ -9,9 +9,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.MainActivity
-import com.example.sns_super_android.sns.Network.Request.LoginRequest
-import com.example.sns_super_android.sns.login.data.LoginRepository
-import com.example.sns_super_android.sns.login.data.SharedPref
 
 class TeacherLoginActivity : AppCompatActivity() {
     private var tv_teacher_go_register : TextView? = null
@@ -28,7 +25,6 @@ class TeacherLoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
-        SharedPref.openSharedPrep(this)
         btn_teacher_login = findViewById<View>(R.id.btn_login_teacher) as Button
         btn_teacher_login!!.setOnClickListener{
             val id = et_teacher_id!!.text.toString().trim()

@@ -15,12 +15,14 @@ class SettingActivity : AppCompatActivity() {
     private var et_email: EditText? = null
     private var btn_add_email: Button? = null
     private var email: String? = null
+    private var mypage_toolbar : Toolbar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
         tv_password = findViewById<View>(R.id.tv_password_setting) as TextView
         et_email = findViewById<View>(R.id.et_setting_email) as EditText
         btn_add_email = findViewById<View>(R.id.btn_email_setting) as Button
+        mypage_toolbar = findViewById<View>(R.id.mypage_toolbar) as Toolbar
 
         var a = 0
         et_email!!.isEnabled = false
