@@ -25,7 +25,7 @@ class MypageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_setting_account = getView()?.findViewById(R.id.btn_setting_account)
+        btn_setting_account = getView()?.findViewById(R.id.btn_setting_account_2)
         btn_setting_account!!.setOnClickListener {
             activity.let {
                 val intent = Intent(context, SettingActivity::class.java)
@@ -33,7 +33,7 @@ class MypageFragment : Fragment() {
             }
         }
 
-        btn_setting_notice = getView()?.findViewById(R.id.btn_setting_notice)
+        btn_setting_notice = getView()?.findViewById(R.id.btn_setting_notice_2)
         btn_setting_notice!!.setOnClickListener {
             activity.let {
                 val intent = Intent(context, NoticeActivity::class.java)

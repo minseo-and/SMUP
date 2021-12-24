@@ -30,7 +30,7 @@
             android:id="@+id/first_stick"
             android:layout_width="15dp"
             android:layout_height="40dp"
-            android:background="@color/main"
+            android:background="@color/tv_purple"
             app:layout_constraintLeft_toRightOf="@id/first_s"
             app:layout_constraintRight_toLeftOf="@id/last_stick"
             app:layout_constraintTop_toTopOf="parent"
@@ -40,7 +40,7 @@
             android:id="@+id/first_stick_1"
             android:layout_width="15dp"
             android:layout_height="40dp"
-            android:background="@color/main"
+            android:background="@color/tv_purple"
             app:layout_constraintLeft_toRightOf="@id/first_s"
             app:layout_constraintRight_toLeftOf="@id/last_stick"
             app:layout_constraintBottom_toBottomOf="@id/first_stick"/>
@@ -49,7 +49,7 @@
             android:id="@+id/last_stick"
             android:layout_width="15dp"
             android:layout_height="40dp"
-            android:background="@color/main"
+            android:background="@color/tv_purple"
             app:layout_constraintLeft_toRightOf="@id/first_stick"
             app:layout_constraintRight_toLeftOf="@id/last_s"
             app:layout_constraintBottom_toBottomOf="@id/first_stick"/>
@@ -58,7 +58,7 @@
             android:id="@+id/last_stick_1"
             android:layout_width="15dp"
             android:layout_height="40dp"
-            android:background="@color/main"
+            android:background="@color/tv_purple"
             app:layout_constraintLeft_toRightOf="@id/first_stick"
             app:layout_constraintRight_toLeftOf="@id/last_s"
             app:layout_constraintBottom_toBottomOf="@id/first_stick"/>
