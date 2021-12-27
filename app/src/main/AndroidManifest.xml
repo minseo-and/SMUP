@@ -14,54 +14,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SNS_Super_Android">
         <activity
-            android:name=".sns.timetable.TimeTableActivity"
+            android:name="com.example.sns_super_android.sns.View.Timetable.TimeTableActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.sns.login.ui.TeacherLoginActivity"
+            android:name=".sns.View.Login.TeacherLoginActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.login.ui.StartSelectActivity"
+            android:name=".sns.View.StartSelect.StartSelectActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.splash.SignUpDoneActivity"
+            android:name=".sns.View.Splash.SignUpDoneActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.notice.ui.NoticeViewActivity"
+            android:name=".sns.View.Notice.NoticeViewActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.schedule.Todays_scheduleActivity"
+            android:name="com.example.sns_super_android.sns.View.Schedule.Todays_scheduleActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.RingTone.ui.RingToneNoticeActivity"
+            android:name=".sns.View.RingTone.RingToneNoticeActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.notice.ui.NoticeActivity"
+            android:name=".sns.View.Notice.NoticeActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.Mypage.PasswordPopupWindowActivity"
+            android:name=".sns.View.Mypage.PasswordPopupWindowActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.Mypage.SettingPasswordActivity"
+            android:name=".sns.View.Mypage.SettingPasswordActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.Mypage.SettingActivity"
+            android:name=".sns.View.Mypage.SettingActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.sns.service.chatting.ChatActivity"
+            android:name=".sns.View.Chatting.ChatActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.splash.IntroActivity"
+            android:name=".sns.View.Splash.IntroActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name="com.example.sns.login.ui.SignUpActivity"
+            android:name=".sns.View.SignUp.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.sns.login.ui.LoginActivity"
+            android:name=".sns.View.Login.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".sns.MainActivity"
+            android:name=".sns.View.Main.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sns.splash.SignUpDoneActivity">
+    tools:context=".sns.View.Splash.SignUpDoneActivity">
 
     <ImageView
         android:id="@+id/img_circle"

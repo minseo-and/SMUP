@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".sns.Mypage.SettingActivity">
+    tools:context=".sns.View.Mypage.SettingActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/mypage_left_to_parent_line"
