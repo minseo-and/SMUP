@@ -7,6 +7,10 @@ android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.sns_super_android"
         minSdkVersion 28
