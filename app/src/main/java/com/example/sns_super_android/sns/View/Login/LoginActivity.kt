@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.sns_super_android.sns.View.SignUp.SignUpActivity
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.View.Main.MainActivity
-import com.example.sns_super_android.sns.Model.Network.model.LoginRequest
+import com.example.sns_super_android.sns.Model.Network.model.login.LoginRequest
 import com.example.sns_super_android.sns.ViewModel.Login.LoginViewModel
 
 

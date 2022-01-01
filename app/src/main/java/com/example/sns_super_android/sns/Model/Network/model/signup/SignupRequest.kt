@@ -1,4 +1,4 @@
-package com.example.sns_super_android.sns.Model.Network.Request
+package com.example.sns_super_android.sns.Model.Network.model.signup
 
 data class SignupRequest(var birth: String ,
                          var classNum: Int ,

@@ -1,8 +1,8 @@
 package com.example.sns_super_android.sns.Model.Data
 
-import com.example.sns_super_android.sns.Model.Network.Response.TokenResponse
-import com.example.sns_super_android.sns.Model.Network.model.LoginRequest
-import com.example.sns_super_android.sns.Model.Network.model.LoginResponse
+import com.example.sns_super_android.sns.Model.Network.model.token.TokenResponse
+import com.example.sns_super_android.sns.Model.Network.model.login.LoginRequest
+import com.example.sns_super_android.sns.Model.Network.model.login.LoginResponse
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body

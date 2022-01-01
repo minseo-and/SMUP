@@ -1,4 +1,4 @@
-package com.example.sns_super_android.sns.Model.Network.model
+package com.example.sns_super_android.sns.Model.Network.model.login
 
 data class LoginRequest(
     var deviceToken: String,

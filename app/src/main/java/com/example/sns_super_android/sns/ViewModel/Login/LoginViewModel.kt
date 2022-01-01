@@ -2,8 +2,8 @@ package com.example.sns_super_android.sns.ViewModel.Login
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.sns_super_android.sns.Model.Network.LOGIN_API
-import com.example.sns_super_android.sns.Model.Network.Response.TokenResponse
-import com.example.sns_super_android.sns.Model.Network.model.LoginRequest
+import com.example.sns_super_android.sns.Model.Network.model.token.TokenResponse
+import com.example.sns_super_android.sns.Model.Network.model.login.LoginRequest
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
