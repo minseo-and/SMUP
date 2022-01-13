@@ -18,13 +18,7 @@ class IntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
-        smallStick = findViewById<View>(R.id.last_stick_1)
-        anim02 = AnimationUtils.loadAnimation(this, R.anim.intro_anim_2)
-        smallStick!!.startAnimation(anim02)
 
-        bigStick = findViewById<View>(R.id.first_stick_1)
-        anim01 = AnimationUtils.loadAnimation(this, R.anim.intro_anim)
-        bigStick!!.startAnimation(anim01)
         val handler = Handler()
         handler.postDelayed({
             val intent = Intent(this, StartSelectActivity::class.java)

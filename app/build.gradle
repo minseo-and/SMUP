@@ -7,9 +7,7 @@ android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
-    dataBinding {
-        enabled = true
-    }
+
 
     defaultConfig {
         applicationId "com.example.sns_super_android"
@@ -23,12 +21,18 @@ android {
 
     buildTypes {
         release {
+            viewBinding {
+                enabled = true
+            }
+            dataBinding {
+                enabled = true
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {

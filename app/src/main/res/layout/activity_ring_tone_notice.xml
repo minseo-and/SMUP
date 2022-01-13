@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".sns.View.RingTone.RingToneNoticeActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.ebanx.swipebtn.SwipeButton
-        android:id="@+id/swipe_button"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        app:button_background="@drawable/button_shape"
-        app:button_bottom_padding="30dp"
-        app:button_left_padding="30dp"
-        app:button_right_padding="30dp"
-        app:button_top_padding="30dp"
-        app:inner_text="밀어서 잠금 해제"
-        app:inner_text_background="@drawable/inner_text_shape"
-        app:inner_text_bottom_padding="15dp"
-        app:inner_text_size="20dp"
-        app:inner_text_color="@color/white"
-        app:inner_text_top_padding="15dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.ebanx.swipebtn.SwipeButton
+            android:id="@+id/swipe_button"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:button_background="@drawable/button_shape"
+            app:button_bottom_padding="30dp"
+            app:button_left_padding="30dp"
+            app:button_right_padding="30dp"
+            app:button_top_padding="30dp"
+            app:inner_text="밀어서 잠금 해제"
+            app:inner_text_background="@drawable/inner_text_shape"
+            app:inner_text_bottom_padding="15dp"
+            app:inner_text_size="20dp"
+            app:inner_text_color="@color/white"
+            app:inner_text_top_padding="15dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:text="오늘의 상식 박민서는 사실 엄청나게 잘생겼어요"
-        android:textSize="30dp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:text="오늘의 상식 박민서는 사실 엄청나게 잘생겼어요"
+            android:textSize="30dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

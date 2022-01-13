@@ -8,125 +8,51 @@
     tools:context=".sns.View.StartSelect.StartSelectActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/start_half_line"
+        android:id="@+id/button_line"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/start_background"/>
+        android:scaleType="fitEnd"
+        android:src="@drawable/setting_background"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
-    <ImageView
-        android:id="@+id/img_woman"
-        android:layout_width="219dp"
-        android:layout_height="160dp"
-        android:src="@drawable/woman"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Welcome!!"
-        android:textSize="18dp"
+    <Button
+        android:id="@+id/btn_go_login"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login_btn_style"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="13dp"
+        android:textColor="@color/white"
         android:includeFontPadding="false"
         android:fontFamily="@font/noto_sans_bold"
-        app:layout_constraintTop_toBottomOf="@id/img_woman"
+        app:layout_constraintBottom_toTopOf="@id/button_line"
+        android:layout_marginBottom="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_user"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="회원이신가요?"
-        android:textSize="15dp"
+    <Button
+        android:id="@+id/btn_go_signup"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login_btn_shape"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textSize="13dp"
+        android:textColor="#FBE9F4"
         android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        android:layout_marginRight="10dp"
-        app:layout_constraintRight_toRightOf="@id/start_half_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
-        app:layout_constraintBottom_toTopOf="@id/tv_not_user"/>
+        android:fontFamily="@font/noto_sans_bold"
+        app:layout_constraintTop_toBottomOf="@id/button_line"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_not_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="회원이 아니신가요?"
-        android:textSize="15dp"
-        android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        app:layout_constraintTop_toBottomOf="@id/tv_user"
-        android:layout_marginRight="10dp"
-        app:layout_constraintRight_toRightOf="@id/start_half_line"
-        app:layout_constraintBottom_toTopOf="@id/tv_teacher"/>
 
-    <TextView
-        android:id="@+id/tv_teacher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="선생님이신가요?"
-        android:textSize="15dp"
-        android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        app:layout_constraintTop_toBottomOf="@id/tv_not_user"
-        android:layout_marginRight="10dp"
-        app:layout_constraintRight_toRightOf="@id/start_half_line"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv_go_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/main"
-        android:text="로그인 하러가기"
-        android:textSize="15dp"
-        android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/start_half_line"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
-        app:layout_constraintBottom_toTopOf="@id/tv_not_user"/>
-
-    <TextView
-        android:id="@+id/tv_go_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/main"
-        android:text="회원가입 하러가기"
-        android:textSize="15dp"
-        android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        app:layout_constraintTop_toBottomOf="@id/tv_user"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/start_half_line"
-        app:layout_constraintBottom_toTopOf="@id/tv_teacher"/>
-
-    <TextView
-        android:id="@+id/tv_teacher_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/main"
-        android:text="확인"
-        android:textSize="15dp"
-        android:includeFontPadding="false"
-        android:fontFamily="@font/noto_sans_regular"
-        app:layout_constraintTop_toBottomOf="@id/tv_not_user"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/start_half_line"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

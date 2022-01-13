@@ -12,6 +12,11 @@
         android:title="채팅"/>
 
     <item
+        android:id="@+id/menu_dms"
+        android:icon="@drawable/dms"
+        android:title="dms" />
+
+    <item
         android:id="@+id/menu_soom"
         android:icon="@drawable/component"
         android:title="soom"/>

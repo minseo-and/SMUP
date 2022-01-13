@@ -30,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
 
         et_id = findViewById<View>(R.id.et_write_id) as EditText
         et_password = findViewById<View>(R.id.et_write_password) as EditText
-        tv_go_register = findViewById<View>(R.id.tv_go_register) as TextView
         tv_go_register!!.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
