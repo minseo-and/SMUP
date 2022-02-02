@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".sns.View.Fragment.mainpage.MainPageMealFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금요일"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_day_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_day"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="2022.01.07"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/noto_sans_regular" />
+
+            <TextView
+                android:id="@+id/tv_breakfast"
+                android:layout_width="300dp"
+                android:layout_height="115dp"
+                android:background="@drawable/meal_background"
+                app:layout_constraintTop_toBottomOf="@id/tv_day_num"
+                app:layout_constraintBottom_toTopOf="@id/tv_lunch"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tv_lunch"
+                android:layout_width="300dp"
+                android:layout_height="115dp"
+                android:background="@drawable/meal_background"
+                app:layout_constraintTop_toBottomOf="@id/tv_breakfast"
+                app:layout_constraintBottom_toTopOf="@id/tv_lunch"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/tv_dinner"
+                android:layout_width="300dp"
+                android:layout_height="115dp"
+                android:background="@drawable/meal_background"
+                app:layout_constraintTop_toBottomOf="@id/tv_lunch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

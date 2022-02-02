@@ -2,6 +2,7 @@ package com.example.sns_super_android.sns.View.Fragment.mypage
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +12,13 @@ import com.example.sns_super_android.sns.View.Login.LoginActivity
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.View.Mypage.SettingActivity
 import com.example.sns_super_android.sns.View.Notice.NoticeActivity
+import java.time.LocalTime
 
 class MypageFragment : Fragment() {
     private var btn_setting_account : Button?=null
-    private var btn_setting_school : Button?=null
     private var btn_setting_notice : Button?=null
     private var btn_logout : Button?=null
+
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_mypage, container, false)
 
@@ -49,5 +51,7 @@ class MypageFragment : Fragment() {
                 activity?.finish()
             }
         }
+
+
     }
 }

@@ -13,9 +13,6 @@ import com.example.sns_super_android.sns.View.Fragment.mypage.MypageFragment
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var bottomNavigationView: BottomNavigationView? = null
-    private var fragmentManager: FragmentManager? = null
-    private var fragment_main: MainPageFragment? = null
-    private val chattingPageFragment: ChattingPageFragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

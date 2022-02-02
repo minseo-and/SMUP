@@ -23,6 +23,7 @@ class StartSelectActivity : AppCompatActivity() {
         go_login!!.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            // 기존 디자인은 textview를 클릭해야 했지만 현재는 버튼을 누를 시 이동으로 변경
         }
 
         go_signup!!.setOnClickListener {

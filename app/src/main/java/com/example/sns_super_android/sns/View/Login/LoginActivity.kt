@@ -16,7 +16,6 @@ import com.example.sns_super_android.sns.ViewModel.Login.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
 
-    private var tv_go_register: TextView? = null
     private var et_id: EditText? = null
     private var et_password: EditText? = null
 
@@ -26,17 +25,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        observe()
 
         et_id = findViewById<View>(R.id.et_write_id) as EditText
         et_password = findViewById<View>(R.id.et_write_password) as EditText
-        tv_go_register!!.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
-        }
 
         findViewById<View>(R.id.btn_login).setOnClickListener {
-            login()
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+            //로그인 버튼 누를 시 메인 페이지로 이동
+//            login()
 //            val id = et_id!!.text.toString().trim()
 //            val password = et_password!!.text.toString().trim()
 //
@@ -62,32 +58,32 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun login() {
-        val id = et_id!!.text.toString().trim()
-        val password = et_password!!.text.toString().trim()
-
-        if (id.isEmpty()) {
-            et_id!!.error = "비어있음"
-            et_id!!.requestFocus()
-        } else if (password.isEmpty()) {
-            et_password!!.error = "비어있음"
-            et_password!!.requestFocus()
-        } else if (id.isNotEmpty() && password.isNotEmpty()) {
-            vm.login(LoginRequest("DEVICE_TOKEN", id, password))
-        } else {
-            val message = "빈칸을 채워주세요"
-            Toast.makeText(this@LoginActivity, message, Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun observe() {
-        vm.success.observe(this, {
-            startActivity(Intent(applicationContext, MainActivity::class.java))
-        })
-
-        vm.failed.observe(this, {
-            Toast.makeText(applicationContext, "error", Toast.LENGTH_SHORT).show()
-        })
-    }
+//    private fun login() {
+//        val id = et_id!!.text.toString().trim()
+//        val password = et_password!!.text.toString().trim()
+//
+//        if (id.isEmpty()) {
+//            et_id!!.error = "비어있음"
+//            et_id!!.requestFocus()
+//        } else if (password.isEmpty()) {
+//            et_password!!.error = "비어있음"
+//            et_password!!.requestFocus()
+//        } else if (id.isNotEmpty() && password.isNotEmpty()) {
+//            vm.login(LoginRequest("DEVICE_TOKEN", id, password))
+//        } else {
+//            val message = "빈칸을 채워주세요"
+//            Toast.makeText(this@LoginActivity, message, Toast.LENGTH_LONG).show()
+//        }
+//    }
+//
+//    private fun observe() {
+//        vm.success.observe(this, {
+//            startActivity(Intent(applicationContext, MainActivity::class.java))
+//        })
+//
+//        vm.failed.observe(this, {
+//            Toast.makeText(applicationContext, "error", Toast.LENGTH_SHORT).show()
+//        })
+//    }
 }
 

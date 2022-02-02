@@ -52,11 +52,7 @@
         <activity
             android:name=".sns.View.Splash.IntroActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".sns.View.SignUp.SignUpActivity"
@@ -67,6 +63,11 @@
         <activity
             android:name=".sns.View.Main.MainActivity"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>
