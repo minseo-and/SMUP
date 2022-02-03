@@ -16,16 +16,18 @@ import android.widget.ProgressBar
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.sns_super_android.R
 import com.example.sns_super_android.sns.View.StartSelect.StartSelectActivity
 import com.example.sns_super_android.sns.View.Timetable.TimeTableActivity
+import java.lang.reflect.Array.newInstance
 import java.time.LocalTime
 import java.util.*
+import javax.xml.datatype.DatatypeFactory.newInstance
 import kotlin.concurrent.timer
 
 class MainPageFragment : Fragment() {
-    private var CurrentProgress = 0
-    private var progressBar: ProgressBar? = null
+
     private var tv_time : TextView ?= null
     private var main_rg : RadioGroup ?= null
     override fun onCreateView(
@@ -39,39 +41,30 @@ class MainPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        progressBar = getView()?.findViewById(R.id.circle_progressbar)
+
         tv_time = getView()?.findViewById(R.id.tv_real_time)
         main_rg = getView()?.findViewById(R.id.main_radio_group)
 
-        val anim = AnimationUtils.loadAnimation(context, // Fragmet에서 사용이 안되는 함수는 뺴버리고 context로 대체
-            // getApplicationContext(),  // 현재 화면의 제어권자
-            R.anim.rotate_anim
-        ) // 설정한 애니메이션 파일
 
         main_rg!!.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
+
                 R.id.btn_schedule -> {
-                   val mainPageScheduleFragment = MainPageScheduleFragment()
-
-
+                    val mainPageScheduleFragment = MainPageScheduleFragment()
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.mainpage_frame, mainPageScheduleFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+                }
+                R.id.btn_meal -> {
+                    val mainPageMealFragment = MainPageMealFragment()
+                    childFragmentManager.beginTransaction()
+                        .replace(R.id.mainpage_frame, mainPageMealFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
                 }
             }
         }
 
-        val timer = Timer()
-
-
-        val timerTask: TimerTask = object : TimerTask() {
-            override fun run() {
-
-                CurrentProgress = CurrentProgress + 1
-                progressBar!!.setProgress(CurrentProgress)
-                progressBar!!.setMax(60)
-                if (CurrentProgress >= 60) {
-                    CurrentProgress = 0
-                }
-            }
-        }
-        timer.schedule(timerTask, 0, 1000)
     }
 }
